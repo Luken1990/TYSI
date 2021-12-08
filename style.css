@@ -348,7 +348,8 @@ h1 {
 }
 @media screen and (max-width: 428px) {
   .six-col-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2,1fr);
+    padding: 0 50px;
     gap: var(--pixel-50px);
   }
 }
