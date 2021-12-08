@@ -230,6 +230,15 @@ body {
   width: 75ch;
 }
 
+  /* media-queries*/
+
+@media screen and (max-width: 428px){
+  .intro-container {
+    width: auto;
+    padding: 0 30px;
+  }
+}
+
 h1 {
   font-family: var(--FF-font);
   color: #00ff91;
@@ -477,7 +486,7 @@ h1 {
   position: absolute;
   top: 50%;
   width: 100%;
-  display: flex;
+  display: none;
   justify-content: space-between;
 }
 
@@ -533,13 +542,28 @@ h1 {
 }
 
 @media screen and (max-width: 810px) {
+  .teams-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   .member {
     display: flex;
     min-width: calc(100% / 2);
+    margin-top: var(--pixel-30px);
   }
 }
 
 @media screen and (max-width: 428px) {
+  .teams-container {
+    flex-wrap:nowrap;
+    justify-content: start;
+  }
+
+  .carousel-btn-container {
+    display: flex;
+  }
+
   .member {
     min-width: 100%;
   }
