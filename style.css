@@ -61,20 +61,19 @@ body {
 .btn {
   font-family: var(--FF-btn);
   padding: var(--pixel-10px) var(--pixel-20px);
-  background-color: var(--Primary-color);
-  color: var(--secondary-color);
-  border: none;
+  background-color: var(--Primary-color , #000);
+  color: var(--secondary-color , #fff);
+  /* border: none; */
   font-size: 1rem;
-  /* margin-top: var(--pixel-20px); */
-  border: 5px solid rgba(0, 0, 0, 0);
+  border: 1px solid rgb(255, 255, 255);
   box-sizing: border-box;
 }
 
 .btn:hover {
-  background-color: rgba(0, 0, 0, 0);
-  border: 5px solid var(--highlight-blue);
+  background-color: rgba(0, 0, 0, 0.0);
+  border: 1px solid var(--highlight-blue , #004bff);
   box-sizing: border-box;
-  color: var(--highlight-blue);
+  color: var(--highlight-blue , #004bff);
 }
 
 /* .content-container {
@@ -93,7 +92,7 @@ body {
 
 .fixed-nav {
   position: fixed !important;
-  background-color: var(--Primary-color);
+  background-color: var(--Primary-color, #000);
 }
 
 .nav-container {
@@ -126,7 +125,7 @@ body {
 
 .nav-btn a {
   text-decoration: none;
-  color: var(--secondary-color);
+  color: var(--secondary-color , #fff);
   font-family: var(--FF-btn);
   position: relative;
 }
@@ -135,7 +134,7 @@ body {
   position: absolute;
   width: 100%;
   height: 2px;
-  background-color: var(--highlight-blue);
+  background-color: var(--highlight-blue , #004bff);
   display: block;
   top: 100%;
 }
@@ -146,7 +145,7 @@ body {
 
 .fa-bars {
   font-size: 1.5rem;
-  color: var(--highlight-green);
+  color: var(--highlight-green , #00ff91);
 }
 
 /* media-queries  --------------------------------*/
@@ -249,7 +248,7 @@ h1 {
 }
 
 .intro-container p {
-  color: var(--secondary-color);
+  color: var(--secondary-color , #fff);
   text-align: center;
   font-size: 1rem;
   font-family: 'Courier New', Courier, monospace;
@@ -260,7 +259,7 @@ h1 {
 
 .row {
   /* height: 50vh; */
-  background-color: var(--secondary-color);
+  background-color: var(--secondary-color , #fff);
   box-sizing: border-box;
   margin: 0;
   /* padding: 3.125rem; */
@@ -268,7 +267,7 @@ h1 {
 
 .row h2 {
   text-align: center;
-  color: var(--Primary-color);
+  color: var(--Primary-color , #000);
   font-family: var(--FF-font);
   font-size: var(--h2-);
   text-transform: uppercase;
@@ -276,7 +275,7 @@ h1 {
 }
 
 .highlight-color {
-  color: var(--highlight-blue);
+  color: var(--highlight-blue , #004bff);
 }
 
 .container {
@@ -324,16 +323,16 @@ h1 {
 
 .s-icons {
   font-size: 4rem;
-  color: var(--Primary-color);
+  color: var(--Primary-color , #000);
 }
 
 .s-icons:hover {
-  color: var(--highlight-blue);
+  color: var(--highlight-blue , #004bff);
 }
 
 .services-titles {
   font-weight: 600;
-  color: var(--Primary-color);
+  color: var(--Primary-color , #000);
   font-size: var(--h4-);
   text-align: center;
   margin-top: var(--pixel-20px);
@@ -377,7 +376,7 @@ h1 {
 }
 
 #showreel h2 {
-  color: var(--secondary-color);
+  color: var(--secondary-color , #fff);
   z-index: 1;
 }
 
@@ -410,7 +409,7 @@ h1 {
 
 .about-us {
   grid-column: 4/7;
-  color: var(--secondary-color);
+  color: var(--secondary-color , #fff);
 }
 
 /* SERVICES MEDIA QUERIES---------------------------------- */
@@ -495,7 +494,7 @@ h1 {
 }
 
 .carousel-btn:hover {
-  color: var(--highlight-blue);
+  color: var(--highlight-blue , #004bff);
 }
 
 .carousel-btn-container i {
@@ -524,7 +523,7 @@ h1 {
 }
 
 .selected {
-  border: 2px solid var(--highlight-blue);
+  border: 2px solid var(--highlight-blue , #004bff);
 }
 
 /* TEAM MEDIA QUERIES---------------------------------- */
@@ -602,7 +601,7 @@ h1 {
 
 #quote-text {
   margin-bottom: var(--pixel-30px);
-  color: var(--secondary-color);
+  color: var(--secondary-color, #fff);
   font-size: 30px;
   font-family: var(--FF-font);
   text-transform: uppercase;
@@ -698,7 +697,7 @@ h1 {
 }
 
 #contacts h2 {
-  color: var(--secondary-color);
+  color: var(--secondary-color , #fff);
 }
 
 #form-container {
@@ -716,10 +715,10 @@ h1 {
   padding: 3.125rem;
   border-radius: 1rem;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
-  color: #fff;
+  color: var(--secondary-color , #fff);
   text-transform: capitalize;
   flex-basis: 450px;
-  border: 1px solid var(--highlight-blue);
+  border: 1px solid var(--highlight-blue , #004bff);
 }
 
 .input-fields {
@@ -758,8 +757,8 @@ textarea {
   border: none;
   padding: var(--pixel-20px);
   width: 100%;
-  background-color: var(--highlight-blue);
-  color:var(--secondary-color);
+  background-color: var(--highlight-blue , #004bff);
+  color:var(--secondary-color , #fff);
   font-family: var(--FF-font);
   font-size: 1rem;
 }
@@ -777,7 +776,7 @@ textarea {
 /* footer ------------------------------------------------------- */
 
 footer {
-  background-color: var(--Primary-color);
+  background-color: var(--Primary-color , #000);
   display: grid;
   place-content: center;
   text-align: center;
@@ -786,7 +785,7 @@ footer {
 
 h4,
 .address {
-  color: var(--secondary-color);
+  color: var(--secondary-color , #fff);
 }
 
 .address {
@@ -794,7 +793,7 @@ h4,
 }
 
 .fab {
-  color: var(--secondary-color);
+  color: var(--secondary-color , #fff);
   font-size: 1.5rem;
 }
 
