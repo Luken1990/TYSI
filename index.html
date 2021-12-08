@@ -263,15 +263,61 @@
 
       <!------------------------------------------------------>
 
-      <!-- <section id="contacts" class="row">
-        <h2>Our <span class="highlight-color">Contacts</span></h2>
+      <section id="contacts" class="row">
+        <div class="container">
+          <h2>Contact <span class="highlight-color">Us</span></h2>
+          <div id="form-container">
+            <form id="form" action="#" method="get">
+              <div class="form-group">
+                <label id="name-label" class = 'form-txt' for="name">name:</label>
+                <input
+                  class="input-fields"
+                  type="text"
+                  name="name"
+                  id="name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label id="email-label" class = 'form-txt' for="email">Email:</label>
+                <input
+                  class="input-fields"
+                  type="email"
+                  name="email"
+                  id="email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <p class = 'form-txt'>Describe your project:</p>
+                <textarea
+                  name="comments"
+                  id="comments-suggestions"
+                  cols="30"
+                  rows="20"
+                  placeholder="Tell us how we can help in a few words..."
+                ></textarea>
+              </div>
+
+              <div class="form-group">
+                <p class = 'form-txt'>If you have an event brief please upload it here:</p>
+                <input type="file" name="" id="">
+              </div>
+
+              <div class="form-group">
+              <input class="submit" type="submit" value="Get in touch" />
+              </div>
+            </form>
+          </div>
+        </div> 
       </section>
+
       <div id="scroll-up">
-        <button id="up-btn"><i class="fas fa-chevron-up"></i></button> -->
+        <button id="up-btn"><i class="fas fa-chevron-up"></i></button>
       </div>
     </main>
     
-    <!-- <footer>
+    <footer>
       <h4>Tysi Media LTD</h4>
       <p class="address">
         House, 137-149 Roswell Road London EC1V 7ET United Kingdom
@@ -281,6 +327,7 @@
         <button class="icon socials"><i class="fab fa-instagram"></i></button>
         <button class="icon socials"><i class="fab fa-twitter"></i></button>
       </div>
-    </footer> -->
+    </footer>
+
   </body>
 </html>

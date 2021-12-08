@@ -77,9 +77,9 @@ body {
   color: var(--highlight-blue);
 }
 
-.content-container {
+/* .content-container {
   margin: var(--pixel-50px) 0;
-}
+} */
 
 /* NAV ------------------------------------------------------- */
 
@@ -230,9 +230,9 @@ body {
   width: 75ch;
 }
 
-  /* media-queries*/
+/* media-queries*/
 
-@media screen and (max-width: 428px){
+@media screen and (max-width: 428px) {
   .intro-container {
     width: auto;
     padding: 0 30px;
@@ -282,7 +282,7 @@ h1 {
 .container {
   max-width: 1200px;
   margin: auto;
-  padding: var(--pixel-50px) 0;
+  padding: 100px 0;
 }
 
 .flex {
@@ -299,6 +299,10 @@ h1 {
 
 #services {
   text-align: center;
+}
+
+#services .container{
+  padding: var(--pixel-50px) 0;
 }
 
 #service-icon-container {
@@ -498,18 +502,18 @@ h1 {
   font-size: 40px;
 }
 
-.deactivate{
+.deactivate {
   color: #c2c2c2;
   pointer-events: none;
 }
 
-#dotted-nav{
+#dotted-nav {
   display: none;
   justify-content: center;
   margin-top: var(--pixel-30px);
 }
 
-.dots{
+.dots {
   background-color: #c2c2c2;
   width: 15px;
   height: 15px;
@@ -519,7 +523,7 @@ h1 {
   cursor: pointer;
 }
 
-.selected{
+.selected {
   border: 2px solid var(--highlight-blue);
 }
 
@@ -556,7 +560,7 @@ h1 {
 
 @media screen and (max-width: 428px) {
   .teams-container {
-    flex-wrap:nowrap;
+    flex-wrap: nowrap;
     justify-content: start;
   }
 
@@ -568,8 +572,8 @@ h1 {
     min-width: 100%;
   }
 
-  #dotted-nav{
-    display:flex;
+  #dotted-nav {
+    display: flex;
   }
 }
 
@@ -609,10 +613,9 @@ h1 {
   margin: 0 var(--pixel-20px);
 }
 
-
 /* modal */
 
-.modal {
+/* .modal {
   width: 100vw;
   height: 100vh;
   background-color: #000000f3;
@@ -623,18 +626,7 @@ h1 {
   justify-content: center;
   align-items: center;
 
-}
-
-
-
-
-
-
-
-
-
-
-
+} */
 
 /* CLIENTS ------------------------------------------------------- */
 
@@ -644,6 +636,7 @@ h1 {
   align-self: center;
   align-content: center;
   align-items: center;
+  margin-top: var(--pixel-50px);
 }
 
 .company-logos img {
@@ -658,13 +651,12 @@ h1 {
   filter: none;
 }
 
-
 /* CLIENTS QUERIES---------------------------------- */
 
 @media screen and (max-width: 1024px) {
   #companies {
     grid-template-columns: repeat(5, 1fr);
-    padding:0 50px;
+    padding: 0 50px;
     gap: 50px;
   }
 
@@ -673,19 +665,113 @@ h1 {
       grid-template-columns: repeat(3, 1fr);
       gap: 50px;
     }
+  }
 }
-
-
-
-
-
-
 
 /* SCROLL UP BTN ------------------------------------------------------- */
 
 #scroll-up {
   position: fixed;
   top: 100%;
+}
+
+/* contact us ------------------------------------------------------- */
+
+#contacts {
+  background: url(/TYSI/assets/IMG/G-01.jpg) no-repeat;
+  background-position: top;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 0;
+}
+
+#contacts::after {
+  content: '';
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: #000000bb;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+#contacts h2 {
+  color: var(--secondary-color);
+}
+
+#form-container {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--pixel-50px);
+  padding: 0 var(--pixel-50px);
+}
+
+#form {
+  background-color: rgb(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3.125rem;
+  border-radius: 1rem;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-transform: capitalize;
+  flex-basis: 450px;
+  border: 1px solid var(--highlight-blue);
+}
+
+.input-fields {
+  box-sizing: border-box;
+  margin: var(--pixel-10px) 0 0 0;
+  height: var(--pixel-30px);
+  border: 0;
+  border-radius: 0.125rem;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.form-group {
+  margin: 0.625rem 0;
+}
+
+.form-group p {
+  margin-bottom: var(--pixel-10px);
+}
+
+textarea {
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 0.125rem;
+  border: 0;
+  padding: 1rem;
+  height: 150px;
+}
+
+.form-txt{
+  font-size: 12px;
+}
+
+.submit {
+  border-radius: 0;
+  border: none;
+  padding: var(--pixel-20px);
+  width: 100%;
+  background-color: var(--highlight-blue);
+  color:var(--secondary-color);
+  font-family: var(--FF-font);
+  font-size: 1rem;
+}
+
+.submit:hover{
+  background-color:#002886;
+}
+
+@media screen and (max-width: 428px) {
+  #form {
+    padding: var(--pixel-20px);
+  }
 }
 
 /* footer ------------------------------------------------------- */
@@ -703,6 +789,10 @@ h4,
   color: var(--secondary-color);
 }
 
+.address {
+  margin: var(--pixel-20px) 0;
+}
+
 .fab {
   color: var(--secondary-color);
   font-size: 1.5rem;
@@ -710,5 +800,4 @@ h4,
 
 .socials {
   margin: 0 var(--pixel-10px);
-}
 }
