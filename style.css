@@ -1,5 +1,5 @@
 :root {
-  --Primary-color: #000000;
+  --Primary-color: rgb(0, 0, 0);
   --secondary-color: #ffffff;
   --highlight-blue: #004bff;
   --highlight-green: #00ff91;
@@ -59,7 +59,7 @@ body {
 }
 
 .btn {
-  font-family: var(--FF-btn);
+  font-family: var(--FF-font);
   padding: var(--pixel-10px) var(--pixel-20px);
   background-color: var(--Primary-color , #000);
   color: var(--secondary-color , #fff);
@@ -92,7 +92,7 @@ body {
 
 .fixed-nav {
   position: fixed !important;
-  background-color: var(--Primary-color, #000);
+  background-color: #000000;
 }
 
 .nav-container {
@@ -125,7 +125,7 @@ body {
 
 .nav-btn a {
   text-decoration: none;
-  color: var(--secondary-color , #fff);
+  color: #fff;
   font-family: var(--FF-btn);
   position: relative;
 }
@@ -240,7 +240,7 @@ body {
 
 h1 {
   font-family: var(--FF-font);
-  color: #00ff91;
+  color: #ffffff;
   font-size: var(--h1-);
   font-weight: bold;
   margin: 0;
@@ -248,7 +248,7 @@ h1 {
 }
 
 .intro-container p {
-  color: var(--secondary-color , #fff);
+  color: #ffffff;
   text-align: center;
   font-size: 1rem;
   font-family: 'Courier New', Courier, monospace;
@@ -377,7 +377,7 @@ h1 {
 }
 
 #showreel h2 {
-  color: var(--secondary-color , #fff);
+  color: #ffffff;
   z-index: 1;
 }
 
@@ -410,7 +410,7 @@ h1 {
 
 .about-us {
   grid-column: 4/7;
-  color: var(--secondary-color , #fff);
+  color: #ffffff;
 }
 
 /* SERVICES MEDIA QUERIES---------------------------------- */
@@ -472,6 +472,7 @@ h1 {
   text-transform: uppercase;
   font-size: var(--h2-);
   margin: var(--pixel-20px) 0 5px 0;
+  color: var(--Primary-color);
 }
 
 .role {
@@ -602,7 +603,7 @@ h1 {
 
 #quote-text {
   margin-bottom: var(--pixel-30px);
-  color: var(--secondary-color, #fff);
+  color: #ffffff;
   font-size: 30px;
   font-family: var(--FF-font);
   text-transform: uppercase;
@@ -642,14 +643,22 @@ h1 {
 .company-logos img {
   width: 100%;
   height: 100%;
-  opacity: 50%;
+}
+
+.blk{
+  opacity: 100%;
   filter: grayscale();
 }
 
-.company-logos img:hover {
+.wht{
+  filter: brightness(0) invert(1);
+  opacity: 100%;
+}
+
+/* .company-logos img:hover {
   opacity: 100%;
   filter: none;
-}
+} */
 
 /* CLIENTS QUERIES---------------------------------- */
 
@@ -668,12 +677,6 @@ h1 {
   }
 }
 
-/* SCROLL UP BTN ------------------------------------------------------- */
-
-#scroll-up {
-  position: fixed;
-  top: 100%;
-}
 
 /* contact us ------------------------------------------------------- */
 
@@ -698,7 +701,7 @@ h1 {
 }
 
 #contacts h2 {
-  color: var(--secondary-color , #fff);
+  color:#ffffff;
 }
 
 #form-container {
@@ -716,7 +719,7 @@ h1 {
   padding: 3.125rem;
   border-radius: 1rem;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
-  color: var(--secondary-color , #fff);
+  color: #fff;
   text-transform: capitalize;
   flex-basis: 450px;
   border: 1px solid var(--highlight-blue , #004bff);
@@ -774,10 +777,72 @@ textarea {
   }
 }
 
+/* Light and dark mode toggle ----------------------------------- */
+
+.dark {
+  --Primary-color: #ffffff;
+  --secondary-color: #000000;
+}
+
+
+#light-dark{
+  position: fixed;
+  z-index:100;
+  right: var(--pixel-30px , 30px);
+  bottom: var(--pixel-30px , 30px);
+}
+
+#light-dark-toggle{
+  -webkit-appearance: none;
+  visibility: hidden;
+  display: none;
+}
+
+.check{
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 30px;
+  background-color: var(--highlight-blue);
+  cursor: pointer;
+  border-radius: 30px;
+  transition: ease-in 0.3s;
+}
+
+#light-dark-toggle:checked ~ .check{
+  background: #e2e2e2;
+}
+
+#light-dark-toggle:checked ~ .check::before{
+  transform: translateX(30px);
+}
+
+.check::before{
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  background: var(--secondary-color);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  transition: ease-in 0.3s;
+  box-shadow: 2 2 2 #000000;
+}
+
+@media screen and (max-width: 428px) {
+  #light-dark{
+    position: fixed;
+    z-index:100;
+    right: var(--pixel-30px , 30px);
+    bottom: var(--pixel-30px , 30px);
+  }
+}
+
 /* footer ------------------------------------------------------- */
 
 footer {
-  background-color: var(--Primary-color , #000);
+  background-color: #000000;
   display: grid;
   place-content: center;
   text-align: center;
@@ -786,7 +851,7 @@ footer {
 
 h4,
 .address {
-  color: var(--secondary-color , #fff);
+  color: #ffffff;
 }
 
 .address {
@@ -794,7 +859,7 @@ h4,
 }
 
 .fab {
-  color: var(--secondary-color , #fff);
+  color: #ffffff;
   font-size: 1.5rem;
 }
 

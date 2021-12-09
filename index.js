@@ -51,7 +51,7 @@ SCROLL_LINKS.forEach((link) => {
     //   position = position - HEADER_NAV_HEIGHT;
     // }
 
-    if(NAV_BTN_HEIGHT !== 0){
+    if (NAV_BTN_HEIGHT !== 0) {
       position = position + NAV_BTN_HEIGHT;
     }
 
@@ -63,3 +63,31 @@ SCROLL_LINKS.forEach((link) => {
   });
 });
 
+// Dark mode -------------------
+
+const darkLightToggle = document.querySelector('#light-dark-toggle');
+const companyImg = document.querySelectorAll('.company-logos img');
+
+darkLightToggle.addEventListener('click', () => {
+  if (darkLightToggle.checked){
+    darkMode()
+  } else{
+    lightMode()
+  }
+});
+
+
+const darkMode = () => {
+  document.body.classList.add('dark')
+  companyImg.forEach((img) => {
+    img.classList.remove('blk')
+    img.classList.add('wht')
+  });
+}
+const lightMode = () => {
+  document.body.classList.remove('dark')
+  companyImg.forEach((img) => {
+    img.classList.remove('wht')
+    img.classList.add('blk')
+  });
+}
